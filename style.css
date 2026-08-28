@@ -1,0 +1,86 @@
+css
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    background-color: #e8f0fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Caixa principal */
+.container {
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #999;
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 25px;
+}
+
+/* Espaçamento dos campos */
+form div {
+    margin-bottom: 15px;
+}
+
+/* Textos dos campos */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Campos de texto */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Área da lista */
+.alunos {
+    margin-top: 25px;
+}
+
+/* Lista de alunos */
+#listaAlunos {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* Cada aluno */
+#listaAlunos li {
+    margin-bottom: 8px;
+}
