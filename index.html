@@ -4,137 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Alunos</title>
-
-    <style>
-        body {
-            font-family: monospace;
-            margin: 0;
-            padding: 20px;
-            background-color: white;
-            color: black;
-        }
-
-        .container {
-            width: 350px;
-            margin-left: 50px;
-        }
-
-        h2 {
-            font-size: 16px;
-            font-weight: normal;
-            margin-bottom: 30px;
-        }
-
-        label {
-            display: inline-block;
-            margin-bottom: 8px;
-            font-size: 16px;
-        }
-
-        input {
-            font-family: monospace;
-            font-size: 16px;
-            border: 1px solid black;
-            padding: 2px 4px;
-            outline: none;
-        }
-
-        #nome {
-            width: 210px;
-        }
-
-        #idade {
-            width: 45px;
-        }
-
-        button {
-            margin-top: 25px;
-            padding: 4px 10px;
-            font-family: monospace;
-            font-size: 16px;
-            background-color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #eee;
-        }
-
-        .alunos {
-            margin-top: 25px;
-            font-size: 16px;
-        }
-
-        .alunos p {
-            margin: 0 0 8px 0;
-        }
-
-        ul {
-            margin-top: 5px;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-    </style>
 </head>
 
 <body>
 
-    <div class="container">
-
-        <h2>CADASTRO DE ALUNOS</h2>
+    <main>
+        <h1>CADASTRO DE ALUNOS</h1>
 
         <form id="formulario">
+
             <div>
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" required>
+                <input 
+                    type="text" 
+                    id="nome" 
+                    name="nome"
+                    placeholder="Digite o nome"
+                    required
+                >
             </div>
 
             <div>
                 <label for="idade">Idade:</label>
-                <input type="number" id="idade" required>
+                <input 
+                    type="number" 
+                    id="idade" 
+                    name="idade"
+                    min="1"
+                    max="120"
+                    placeholder="Idade"
+                    required
+                >
             </div>
 
             <button type="submit">[ CADASTRAR ]</button>
+
         </form>
 
-        <div class="alunos">
-            <p>Alunos cadastrados:</p>
+        <section>
+            <h2>Alunos cadastrados:</h2>
 
             <ul id="listaAlunos">
                 <li>João - 16 anos</li>
                 <li>Maria - 17 anos</li>
             </ul>
-        </div>
+        </section>
 
-    </div>
-
-    <script>
-        const formulario = document.getElementById("formulario");
-        const nome = document.getElementById("nome");
-        const idade = document.getElementById("idade");
-        const listaAlunos = document.getElementById("listaAlunos");
-
-        formulario.addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            const nomeAluno = nome.value;
-            const idadeAluno = idade.value;
-
-            const novoAluno = document.createElement("li");
-            novoAluno.textContent = `${nomeAluno} - ${idadeAluno} anos`;
-
-            listaAlunos.appendChild(novoAluno);
-
-            nome.value = "";
-            idade.value = "";
-
-            nome.focus();
-        });
-    </script>
+    </main>
 
 </body>
 </html>
